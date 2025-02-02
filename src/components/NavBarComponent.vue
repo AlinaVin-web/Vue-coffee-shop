@@ -4,18 +4,18 @@
       class="header d-flex justify-content-center justify-content-md-start flex-wrap"
     >
       <li class="header__item">
-        <a href="./index.html">
+        <RouterLink to="/">
           <img src="@/assets/logo/Logo.svg" alt="logo" />
-        </a>
+        </RouterLink>
       </li>
       <li class="header__item">
-        <a href="./coffeepage.html">Our coffee</a>
+        <RouterLink to="/our-coffee">Our coffee</RouterLink>
       </li>
       <li class="header__item">
-        <a href="./goodspage.html">For your pleasure</a>
+        <RouterLink to="/for-your-pleasure">For your pleasure</RouterLink>
       </li>
       <li class="header__item">
-        <a href="./contacts.html">Contact us</a>
+        <RouterLink to="/contact-us">Contact us</RouterLink>
       </li>
     </ul>
   </header>

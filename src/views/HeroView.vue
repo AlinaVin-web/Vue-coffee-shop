@@ -19,7 +19,7 @@
               We makes every day full of energy and taste
             </div>
             <div class="preview__subtitle">Want to try our beans?</div>
-            <a href="./coffeepage.html" class="preview__btn">More</a>
+            <RouterLink to="/our-coffee" class="preview__btn">More</RouterLink>
           </div>
         </div>
       </div>
@@ -59,9 +59,9 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
-              <best-item-component />
-              <best-item-component />
-              <best-item-component />
+              <product-card />
+              <product-card />
+              <product-card />
             </div>
           </div>
         </div>
@@ -70,10 +70,10 @@
   </main>
 </template>
 
-<script >
+<script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
-import BestItemComponent from "@/components/BestItemComponent.vue";
+import ProductCard from "@/components/ProductCard.vue";
 export default {
-  components: { NavBarComponent, BestItemComponent },
+  components: { NavBarComponent, ProductCard },
 };
 </script>
