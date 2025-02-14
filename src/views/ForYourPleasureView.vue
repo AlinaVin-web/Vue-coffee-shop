@@ -7,7 +7,7 @@
             <nav-bar-component />
           </div>
         </div>
-        <h1 class="title-big">For your pleasure</h1>
+        <PageTitle text="For your pleasure" />
       </div>
     </div>
     <section class="shop">
@@ -48,12 +48,48 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
+              <product-card
+                classItem="shop__item"
+                :name="goods[0].name"
+                :country="goods[0].country"
+                :price="goods[0].price"
+                :image="goods[0].img"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[1].name"
+                :country="goods[1].country"
+                :price="goods[1].price"
+                :image="goods[1].img"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[2].name"
+                :country="goods[2].country"
+                :price="goods[2].price"
+                :image="goods[2].img"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[3].name"
+                :country="goods[3].country"
+                :price="goods[3].price"
+                :image="goods[3].img"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[4].name"
+                :country="goods[4].country"
+                :price="goods[4].price"
+                :image="goods[4].img"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[5].name"
+                :country="goods[5].country"
+                :price="goods[5].price"
+                :image="goods[5].img"
+              />
             </div>
           </div>
         </div>
@@ -64,9 +100,10 @@
 
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
+import PageTitle from "@/components/PageTitle.vue";
 import ProductCard from "@/components/ProductCard.vue";
 export default {
-  components: { NavBarComponent, ProductCard },
+  components: { NavBarComponent, ProductCard, PageTitle },
   data() {
     return {
       goods: [
