@@ -7,7 +7,7 @@
             <nav-bar-component />
           </div>
         </div>
-        <PageTitle text="Contact us" />
+        <page-title text="Contact us" />
       </div>
     </div>
     <section class="contacts">

@@ -7,7 +7,7 @@
             <nav-bar-component />
           </div>
         </div>
-        <PageTitle text="For your pleasure" />
+        <page-title text="For your pleasure" />
       </div>
     </div>
     <section class="shop">
@@ -49,46 +49,13 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
               <product-card
+                v-for="product in goods"
+                :key="product.id"
                 classItem="shop__item"
-                :name="goods[0].name"
-                :country="goods[0].country"
-                :price="goods[0].price"
-                :image="goods[0].img"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="goods[1].name"
-                :country="goods[1].country"
-                :price="goods[1].price"
-                :image="goods[1].img"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="goods[2].name"
-                :country="goods[2].country"
-                :price="goods[2].price"
-                :image="goods[2].img"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="goods[3].name"
-                :country="goods[3].country"
-                :price="goods[3].price"
-                :image="goods[3].img"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="goods[4].name"
-                :country="goods[4].country"
-                :price="goods[4].price"
-                :image="goods[4].img"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="goods[5].name"
-                :country="goods[5].country"
-                :price="goods[5].price"
-                :image="goods[5].img"
+                :name="product.name"
+                :country="product.country"
+                :price="product.price"
+                :image="product.img"
               />
             </div>
           </div>
@@ -102,48 +69,50 @@
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import PageTitle from "@/components/PageTitle.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import { v4 as uuidv4 } from "uuid";
+
 export default {
   components: { NavBarComponent, ProductCard, PageTitle },
   data() {
     return {
       goods: [
         {
-          id: 0,
+          id: uuidv4(),
           name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
           price: 10.73,
           img: "good-1.jpg",
         },
         {
-          id: 1,
+          id: uuidv4(),
           name: "Presto Coffee Beans 1kg",
           country: "Brazil",
           price: 15.99,
           img: "good-1.jpg",
         },
         {
-          id: 2,
+          id: uuidv4(),
           name: "AROMISTICO Coffee 1kg",
           country: "Brazil",
           price: 6.99,
           img: "good-1.jpg",
         },
         {
-          id: 3,
+          id: uuidv4(),
           name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
           price: 10.73,
           img: "good-1.jpg",
         },
         {
-          id: 4,
+          id: uuidv4(),
           name: "Presto Coffee Beans 1kg",
           country: "Brazil",
           price: 15.99,
           img: "good-1.jpg",
         },
         {
-          id: 5,
+          id: uuidv4(),
           name: "AROMISTICO Coffee 1kg",
           country: "Brazil",
           price: 6.99,

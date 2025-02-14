@@ -4,28 +4,19 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <ul class="footer d-flex flex-wrap">
-            <li class="footer__item">
-              <RouterLink :to="links[0].link">
-                <img
-                  :src="require(`@/assets/logo/${links[0].icon}`)"
-                  :alt="links[0].icon"
-                />
-              </RouterLink>
-            </li>
+            <menu-link classItem="footer__item" :link="links.home.link">
+              <img
+                :src="require(`@/assets/logo/${links.home.icon}`)"
+                :alt="links.home.icon"
+              />
+            </menu-link>
+
             <menu-link
+              v-for="link in links.other"
+              :key="link.id"
               classItem="footer__item"
-              :link="links[1].link"
-              :text="links[1].text"
-            />
-            <menu-link
-              classItem="footer__item"
-              :link="links[2].link"
-              :text="links[2].text"
-            />
-            <menu-link
-              classItem="footer__item"
-              :link="links[3].link"
-              :text="links[3].text"
+              :link="link.link"
+              :text="link.text"
             />
           </ul>
         </div>
@@ -46,28 +37,30 @@ export default {
   components: { MenuLink },
   data() {
     return {
-      links: [
-        {
+      links: {
+        home: {
           id: 0,
           link: "/",
           icon: "Logo_black.svg",
         },
-        {
-          id: 1,
-          text: "Our coffee",
-          link: "/our-coffee",
-        },
-        {
-          id: 2,
-          text: "For your pleasure",
-          link: "/for-your-pleasure",
-        },
-        {
-          id: 3,
-          text: "Contact us",
-          link: "/contact-us",
-        },
-      ],
+        other: [
+          {
+            id: 1,
+            text: "Our coffee",
+            link: "/our-coffee",
+          },
+          {
+            id: 2,
+            text: "For your pleasure",
+            link: "/for-your-pleasure",
+          },
+          {
+            id: 3,
+            text: "Contact us",
+            link: "/contact-us",
+          },
+        ],
+      },
     };
   },
 };

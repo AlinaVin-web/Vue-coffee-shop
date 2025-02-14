@@ -1,6 +1,6 @@
 <template>
   <li :class="classItem">
-    <RouterLink :to="link">{{ text }}</RouterLink>
+    <RouterLink :to="link">{{ text }}<slot></slot></RouterLink>
   </li>
 </template>
 
@@ -13,11 +13,11 @@ export default {
     },
     text: {
       type: String,
-      required: true,
+      required: false,
     },
     classItem: {
       type: String,
-      required: false,
+      required: true,
     },
   },
 };
